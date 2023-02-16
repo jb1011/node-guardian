@@ -15,6 +15,7 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ data }: GuardianProp) {
+	console.log(data)
 	return (
 		<>
 			<Head>
@@ -26,13 +27,15 @@ export default function Home({ data }: GuardianProp) {
 				<StyledContainer>
 					<Row>
 						{data.map((res: any) => {
-							return (
-								<Container key={res?.id}>
-									<Link href={'/quests/' + res.id} style={{ textDecoration: 'none' }}>
-										<Card data={data[res?.id]} />
-									</Link>
-								</Container>
-							)
+							if (res?.id <= 6) {
+								return (
+									<Container key={res?.id}>
+										<Link href={'/quests/' + res.id} style={{ textDecoration: 'none' }}>
+											<Card data={data[res?.id - 1]} />
+										</Link>
+									</Container>
+								)
+							}
 						})}
 					</Row>
 				</StyledContainer>

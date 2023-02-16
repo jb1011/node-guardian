@@ -60,6 +60,7 @@ export const getStaticProps = async (context: any) => {
 
 export default function Guardian({ data }: DetailProp) {
   const router = useRouter();
+  console.log(data.id)
   return (
     <>
       <Head>
