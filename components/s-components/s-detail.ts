@@ -6,7 +6,6 @@ export const StyledContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  height: 80vh;
 `
 
 export const CardContainer = styled.div`
@@ -15,7 +14,6 @@ export const CardContainer = styled.div`
 	border-radius: ${defaultTheme.radius.xl};
   width: 80%;
   position: relative;
-  max-height: 80vh;
   max-width: 80vh;
   padding: 3px;
 `
@@ -114,6 +112,11 @@ export const Button = styled.div`
   font-size: 12px;
   border-radius: 2.5px;
   cursor: pointer;
+  transform: 0.2s;
+  &:hover {
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background: linear-gradient(180deg, rgba(7, 15, 29, 0) 0%, rgba(54, 77, 137, 0.4) 100%);
+  }
 `
 
 export const SmallText = styled.div`
@@ -138,7 +141,7 @@ export const SImageBg = styled(Image)`
 `
 
 export const Separator = styled.div`
-  padding-top: 100px;
+  padding-top: 80px;
   @media (max-width: 900px) {
     padding-top: 50px;
 	}

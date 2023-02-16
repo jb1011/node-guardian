@@ -21,6 +21,11 @@ export const Row = styled.div`
 
 export const Container = styled.div`
   flex: 0 0 25%;
+	transition: 0.2s;
+	&:hover {
+		transform: scale(1.02);
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	}
 	@media (max-width: 900px) {
 		flex: 0 0 80%;
 	}
