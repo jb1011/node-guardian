@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { defaultTheme } from "@/styles/theme";
 import Image from "next/image";
+import { defaultTheme } from "@/styles/theme";
 import { useRouter } from 'next/router';
 
 const StyledContainer = styled.div`
