@@ -10,6 +10,7 @@ export const StyledContainer = styled.div`
 	gap: ${defaultTheme.spacing.m};
 	@media (max-width: 900px) {
 		height: 100%;
+		padding-bottom: 30px;
 	}
 `
 export const Row = styled.div`

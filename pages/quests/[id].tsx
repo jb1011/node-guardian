@@ -58,7 +58,6 @@ export const getStaticProps = async (context: any) => {
 }
 
 
-
 export default function Guardian({ data }: DetailProp) {
   const router = useRouter();
   return (

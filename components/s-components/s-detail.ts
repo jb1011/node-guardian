@@ -6,6 +6,9 @@ export const StyledContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  @media (max-width: 900px) {
+    height: 80vh;
+	}
 `
 
 export const CardContainer = styled.div`
