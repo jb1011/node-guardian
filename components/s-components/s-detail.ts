@@ -25,8 +25,10 @@ export const CardTextContainer = styled.div`
 	display: flex;
   flex-direction: column;
 	align-items: center;
-  gap: 10px;
   padding: 0 ${defaultTheme.spacing['2xs']} ${defaultTheme.spacing['2xs']} ${defaultTheme.spacing['2xs']};
+  p {
+    margin: 4px 0px;
+  }
 `
 
 export const Title = styled.p`
