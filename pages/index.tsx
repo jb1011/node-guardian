@@ -15,7 +15,6 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ data }: GuardianProp) {
-
 	return (
 		<>
 			<Head>
