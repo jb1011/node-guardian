@@ -28,12 +28,14 @@ import {
   Button,
   Separator,
   Text
-} from "../../components/s-components/s-detail"
+} from "../../components/s-components/s-detail";
+import { DetailProp } from '@/types/data';
+
 export const getStaticPaths = async () => {
   const res = await fetch("http://localhost:3000/api/quests");
   const data = await res.json();
 
-  const paths = data.map(res => {
+  const paths = data.map((res: any) => {
     return {
       params: { id: res.id.toString() }
     }
@@ -45,7 +47,7 @@ export const getStaticPaths = async () => {
 }
 
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context: any) => {
   const id = context.params.id;
   const res = await fetch('https://dummyjson.com/products/' + id);
   const data = await res.json();
@@ -57,9 +59,8 @@ export const getStaticProps = async (context) => {
 
 
 
-export default function Guardian({ data }) {
+export default function Guardian({ data }: DetailProp) {
   const router = useRouter();
-
   console.log(data)
   return (
     <>

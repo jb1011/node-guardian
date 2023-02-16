@@ -12,8 +12,9 @@ import {
 	SmTitle,
 	Swords
 } from "./s-components/s-card"
+import { GuardianSingleProp } from "../types/data"
 
-export default function Card({ data }) {
+export default function Card({ data }: GuardianSingleProp) {
 	return (
 		<StyledContainer>
 			<Image alt='background image' src={BackgroundImage} layout="responsive" />

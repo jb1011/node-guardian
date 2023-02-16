@@ -12,6 +12,7 @@ export const StyledContainer = styled.div`
 export const FlexItemsCol = styled.div`
 	display: flex;
 	flex-direction: column;
+	gap: ${defaultTheme.spacing['3xs']};
 `
 
 export const FlexItemsFull = styled.div`
@@ -35,6 +36,8 @@ export const Title = styled.p`
 	line-height: 19px;
 	text-transform: capitalize;
 	color: #FFFFFF;
+	margin: 0;
+
 `
 
 export const SmTitle = styled.p`
@@ -45,6 +48,7 @@ export const SmTitle = styled.p`
 	line-height: 14px;
 	color: ${(props) => props.color};
 	width: 50%;
+	margin: 0;
 `
 
 export const Swords = styled.div`
