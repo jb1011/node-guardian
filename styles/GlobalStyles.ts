@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 //========================================================================================================
 * {
 	box-sizing: border-box;
+	padding: 0;
 }
 *::before {
 	box-sizing: border-box;
