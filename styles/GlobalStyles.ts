@@ -17,8 +17,9 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 
 body {
   background-color: ${({ theme }) => theme.colors.black};
+	max-width: 1550px;
+  margin: 0 auto;
 }
-
 `;
 
 export default GlobalStyle;
