@@ -10,18 +10,23 @@ export type IData = {
 	type: string;
 }
 
+type IReward = {
+	experience: number;
+	gold: number;
+}
+
 export type IDetail = {
-	brand: string;
-	category: string;
+	cover: string;
 	description: string;
-	discountPercentage: number;
+	difficulty: number;
+	experience: number;
+	gold: number;
 	id: number;
-	images: Array<string>;
-	price: number;
-	rating: number;
-	stock: number;
-	thumbnail: string;
+	rewards: IReward;
+	skill: string;
+	skillTree: string;
 	title: string;
+	type: string;
 }
 
 export interface GuardianProp {

@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
 	try {
 		// Fetch a product by id
 		const questRes = await fetch(`https://dummyjson.com/products/${String(req.query.id)}`, {

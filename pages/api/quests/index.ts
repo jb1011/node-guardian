@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
 	try {
 		// Save the data to the collection
-		const getRes = await fetch(`https://dummyjson.com/products?offset=0&limit=10`, {
+		const getRes = await fetch(`https://dummyjson.com/products?offset=0&limit=6`, {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json'

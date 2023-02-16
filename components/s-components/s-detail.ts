@@ -61,6 +61,7 @@ export const FlexItemsHalf = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 50%;
+  align-items: center;
 `
 
 export const SmTitle = styled.p`

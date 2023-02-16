@@ -27,16 +27,13 @@ export default function Home({ data }: GuardianProp) {
 				<StyledContainer>
 					<Row>
 						{data.map((res: any) => {
-							console.log(data[res?.id])
-							if (res?.id <= 6) {
-								return (
-									<Container key={res?.id}>
-										<Link href={'/quests/' + res.id} style={{ textDecoration: 'none' }}>
-											<Card data={data[res?.id]} />
-										</Link>
-									</Container>
-								)
-							}
+							return (
+								<Container key={res?.id}>
+									<Link href={'/quests/' + res.id} style={{ textDecoration: 'none' }}>
+										<Card data={data[res?.id]} />
+									</Link>
+								</Container>
+							)
 						})}
 					</Row>
 				</StyledContainer>

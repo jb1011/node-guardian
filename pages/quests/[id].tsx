@@ -49,7 +49,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context: any) => {
   const id = context.params.id;
-  const res = await fetch('https://dummyjson.com/products/' + id);
+  const res = await fetch('http://localhost:3000/api/quests/' + id);
   const data = await res.json();
 
   return {
@@ -61,7 +61,6 @@ export const getStaticProps = async (context: any) => {
 
 export default function Guardian({ data }: DetailProp) {
   const router = useRouter();
-  console.log(data)
   return (
     <>
       <Head>
@@ -83,31 +82,31 @@ export default function Guardian({ data }: DetailProp) {
               <FlexItemsFull>
                 <FlexItemsHalf>
                   <SmTitle color={darkTheme.colors.gold}>Skill tree</SmTitle>
-                  <SmTitle color={darkTheme.colors.blue}>{data?.title}</SmTitle>
+                  <SmTitle color={darkTheme.colors.blue}>{data.skillTree}</SmTitle>
                 </FlexItemsHalf>
                 <FlexItemsHalf>
                   <SmTitle color={darkTheme.colors.gold}>Difficulty</SmTitle>
                   <Swords>
-                    <Image alt='background image' src={data?.rating >= 1 ? SwordGold : SwordEmpty} />
-                    <Image alt='background image' src={data?.rating >= 2 ? SwordGold : SwordEmpty} />
-                    <Image alt='background image' src={data?.rating >= 3 ? SwordGold : SwordEmpty} />
-                    <Image alt='background image' src={data?.rating >= 4 ? SwordGold : SwordEmpty} />
-                    <Image alt='background image' src={data?.rating === 5 ? SwordGold : SwordEmpty} />
+                    <Image alt='background image' src={data?.difficulty >= 1 ? SwordGold : SwordEmpty} />
+                    <Image alt='background image' src={data?.difficulty >= 2 ? SwordGold : SwordEmpty} />
+                    <Image alt='background image' src={data?.difficulty >= 3 ? SwordGold : SwordEmpty} />
+                    <Image alt='background image' src={data?.difficulty >= 4 ? SwordGold : SwordEmpty} />
+                    <Image alt='background image' src={data?.difficulty === 5 ? SwordGold : SwordEmpty} />
                   </Swords>
                 </FlexItemsHalf>
               </FlexItemsFull>
               <FlexItemsFull>
                 <FlexItemsHalf>
                   <SmTitle color={darkTheme.colors.gold}>Skill</SmTitle>
-                  <SmTitle color={darkTheme.colors.white}>{data?.category}</SmTitle>
+                  <SmTitle color={darkTheme.colors.white}>{data?.skill}</SmTitle>
                 </FlexItemsHalf>
                 <FlexItemsHalf>
                   <SmTitle color={darkTheme.colors.gold}>Quest type</SmTitle>
-                  <SmTitle color={darkTheme.colors.white}>{data?.category}</SmTitle>
+                  <SmTitle color={darkTheme.colors.white}>{data?.type}</SmTitle>
                 </FlexItemsHalf>
               </FlexItemsFull>
               <FlexItemsFull>
-                <Text>{data?.description}</Text>
+                <Text>{data.description}</Text>
               </FlexItemsFull>
               <Separator />
               <FlexItemsFull>
@@ -116,7 +115,7 @@ export default function Guardian({ data }: DetailProp) {
               <FlexItemsFull>
                 <Box>
                   <Image alt="Exp" src={Exp} />
-                  <SmallText>+ 2000</SmallText>
+                  <SmallText>+ {data?.rewards?.experience}</SmallText>
                 </Box>
                 <Button onClick={() => router.push('/')}>GO BACK</Button>
               </FlexItemsFull>
