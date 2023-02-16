@@ -107,6 +107,10 @@ const SmTitle = styled.div`
 	line-height: 16px;
 	color: ${(props) => props.color};
 	width: 50%;
+  @media (max-width: 900px) {
+    font-size: 12px;
+	  line-height: 14px;
+	}
 `
 
 const Text = styled.div`
@@ -162,6 +166,12 @@ const SImage = styled(Image)`
   cursor: pointer;
 `
 
+const SImageBg = styled(Image)`
+  max-height: 350px;
+  border-top-left-radius: ${defaultTheme.radius.xl};
+  border-top-right-radius: ${defaultTheme.radius.xl};
+`
+
 const Separator = styled.div`
   padding-top: 100px;
   @media (max-width: 900px) {
@@ -190,7 +200,7 @@ export default function Guardian({ data }) {
         <Header />
         <StyledContainer>
           <CardContainer>
-            <Image style={{ maxHeight: '350px' }} alt='background image' src={BackgroundImage} layout="responsive" />
+            <SImageBg alt='background image' src={BackgroundImage} layout="responsive" />
             <SImage onClick={() => router.push('/')} alt='background image' src={Cross} width={15} height={15} />
             <CardTextContainer>
               <FlexTitle>

@@ -66,7 +66,7 @@ export default function Card({ data }) {
 		<StyledContainer>
 			<Image alt='background image' src={BackgroundImage} layout="responsive" />
 			<FlexItemsCol>
-				<Title>DELLEGATE CALL DETECTION</Title>
+				<Title>DELEGATE CALL DETECTION</Title>
 				<FlexItemsFull>
 					<FlexItemsHalf>
 						<SmTitle color={darkTheme.colors.gold}>Skill tree</SmTitle>
