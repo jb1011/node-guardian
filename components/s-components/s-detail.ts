@@ -153,6 +153,9 @@ export const Separator = styled.div`
 `
 
 export const SDecoration = styled(Image)`
+    width: 15%;
+    height: auto;
+
   @media (max-width: 900px) {
     width: 15%;
     height: auto;

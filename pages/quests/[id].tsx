@@ -30,8 +30,9 @@ import {
   Text
 } from "../../components/s-components/s-detail";
 import { DetailProp } from '@/types/data';
+import { GetStaticProps, GetStaticPaths } from 'next'
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch("http://localhost:3000/api/quests");
   const data = await res.json();
 
@@ -47,8 +48,8 @@ export const getStaticPaths = async () => {
 }
 
 
-export const getStaticProps = async (context: any) => {
-  const id = context.params.id;
+export const getStaticProps: GetStaticProps = async (context) => {
+  const id = context?.params?.id;
   const res = await fetch('http://localhost:3000/api/quests/' + id);
   const data = await res.json();
 
